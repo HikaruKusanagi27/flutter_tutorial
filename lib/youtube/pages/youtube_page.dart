@@ -3,14 +3,9 @@ import 'package:flutter_tutorial/youtube/pages/item_categories/item_categories.d
 import 'package:flutter_tutorial/youtube/pages/item_trending/item_trending.dart';
 import 'package:flutter_tutorial/youtube/pages/item_trending/item_trending_header.dart';
 
-class YoutubePage extends StatefulWidget {
+class YoutubePage extends StatelessWidget {
   const YoutubePage({super.key});
 
-  @override
-  State<YoutubePage> createState() => _YoutubePageState();
-}
-
-class _YoutubePageState extends State<YoutubePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
