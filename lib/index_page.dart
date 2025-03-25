@@ -53,7 +53,7 @@ class IndexPage extends StatelessWidget {
             ),
             PageButton(
               text: 'Callback',
-              widget: CallbackPage(),
+              widget: CallbackScreen(),
             ),
           ],
         ),
