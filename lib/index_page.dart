@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_tutorial/callbackPage/callback_page.dart';
+import 'package:flutter_tutorial/callback/callback_page.dart';
 import 'package:flutter_tutorial/drift/pages/todo_list_page/todo_list_page.dart';
 import 'package:flutter_tutorial/qiita/view/qiita_page.dart';
 import 'package:flutter_tutorial/async/async_page.dart';
