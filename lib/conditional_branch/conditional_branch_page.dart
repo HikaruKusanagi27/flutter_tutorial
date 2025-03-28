@@ -9,7 +9,7 @@ void main() {
   if (a != b) {
     developer.log('aとbは等しくありません');
   } else {
-    developer.log('aとbは等しいです,');
+    developer.log('aとbは等しいです');
   }
 }
 
