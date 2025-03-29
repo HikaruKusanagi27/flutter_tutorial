@@ -55,6 +55,10 @@ class IndexPage extends StatelessWidget {
               text: 'Callback',
               widget: CallbackScreen(),
             ),
+            PageButton(
+              text: 'Callback',
+              widget: CallbackScreen(),
+            ),
           ],
         ),
       ),
