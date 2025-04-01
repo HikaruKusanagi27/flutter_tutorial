@@ -7,7 +7,7 @@ class GoogleMapPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('Google Map')),
+      appBar: AppBar(title: const Text('Google Map')),
       body: const GoogleMap(
         initialCameraPosition: CameraPosition(
           target: LatLng(37.7749, -122.4194),
