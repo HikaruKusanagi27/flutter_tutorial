@@ -19,46 +19,15 @@ class IndexPage extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            PageButton(
-              text: 'Tutorial1',
-              widget: BuildingLayoutPage(),
-            ),
-            PageButton(
-              text: 'Tutorial1.1',
-              widget: AnimationPage(),
-            ),
-            PageButton(
-              text: 'YouTubeボタン',
-              widget: YoutubePage(),
-            ),
-            PageButton(
-              text: 'Tutorial2.2',
-              widget: ResidencePage(),
-            ),
-            PageButton(
-              text: 'Tutorial2.3',
-              widget: MercariPage(),
-            ),
-            PageButton(
-              text: 'Async',
-              widget: AsyncPage(),
-            ),
-            PageButton(
-              text: 'Tutorial6',
-              widget: QiitaPage(),
-            ),
-            PageButton(
-              text: 'Drift',
-              widget: TodoListPage(),
-            ),
-            PageButton(
-              text: 'Callback',
-              widget: CallbackScreen(),
-            ),
-            PageButton(
-              text: 'Callback',
-              widget: CallbackScreen(),
-            ),
+            PageButton(text: 'Tutorial1', widget: BuildingLayoutPage()),
+            PageButton(text: 'Tutorial1.1', widget: AnimationPage()),
+            PageButton(text: 'YouTubeボタン', widget: YoutubePage()),
+            PageButton(text: 'Tutorial2.2', widget: ResidencePage()),
+            PageButton(text: 'Tutorial2.3', widget: MercariPage()),
+            PageButton(text: 'Async', widget: AsyncPage()),
+            PageButton(text: 'Tutorial6', widget: QiitaPage()),
+            PageButton(text: 'Drift', widget: TodoListPage()),
+            PageButton(text: 'Callback', widget: CallbackScreen()),
           ],
         ),
       ),
@@ -68,11 +37,7 @@ class IndexPage extends StatelessWidget {
 
 // 各チュートリアルのページ遷移ボタン
 class PageButton extends StatelessWidget {
-  const PageButton({
-    required this.text,
-    required this.widget,
-    super.key,
-  });
+  const PageButton({required this.text, required this.widget, super.key});
 
   final Widget widget;
   final String text;
@@ -83,9 +48,7 @@ class PageButton extends StatelessWidget {
       onPressed: () {
         Navigator.push(
           context,
-          MaterialPageRoute<double>(
-            builder: (context) => widget,
-          ),
+          MaterialPageRoute<double>(builder: (context) => widget),
         );
       },
       child: Text(text),
