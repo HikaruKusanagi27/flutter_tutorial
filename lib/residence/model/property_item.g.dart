@@ -6,18 +6,18 @@ part of 'property_item.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$PropertyItemImpl _$$PropertyItemImplFromJson(Map<String, dynamic> json) =>
-    _$PropertyItemImpl(
+_PropertyItem _$PropertyItemFromJson(Map<String, dynamic> json) =>
+    _PropertyItem(
       imagePath: json['imagePath'] as String? ?? '',
       imagePath2: json['imagePath2'] as String? ?? '',
       title: json['title'] as String? ?? '',
-      price: json['price'] as int? ?? 0,
+      price: (json['price'] as num?)?.toInt() ?? 0,
       accessDescription: json['accessDescription'] as String? ?? '',
       unitDescription: json['unitDescription'] as String? ?? '',
       buildingDetails: json['buildingDetails'] as String? ?? '',
     );
 
-Map<String, dynamic> _$$PropertyItemImplToJson(_$PropertyItemImpl instance) =>
+Map<String, dynamic> _$PropertyItemToJson(_PropertyItem instance) =>
     <String, dynamic>{
       'imagePath': instance.imagePath,
       'imagePath2': instance.imagePath2,

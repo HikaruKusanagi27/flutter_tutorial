@@ -3,10 +3,11 @@ import 'package:flutter_tutorial/qiita/model/qiita_state.dart';
 import 'package:flutter_tutorial/qiita/repository/qiita_repository.dart';
 
 // QiitaViewModel のインスタンスを生成
-final qiitaViewModelProvider =
+final AutoDisposeStateNotifierProvider<QiitaViewModel, QiitaState>
+qiitaViewModelProvider =
     StateNotifierProvider.autoDispose<QiitaViewModel, QiitaState>(
-  QiitaViewModel.new,
-);
+      QiitaViewModel.new,
+    );
 
 // QiitaState の状態を管理
 class QiitaViewModel extends StateNotifier<QiitaState> {

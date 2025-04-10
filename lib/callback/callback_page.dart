@@ -7,10 +7,7 @@ class CallbackScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     // Scaffold マテリアルデザイン用のウィジェット（appBarなどを設定できる） MaterialAppの基本設定を引き継ぐ
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('CallbackScreen'),
-        automaticallyImplyLeading: true, // 戻るボタン矢印
-      ),
+      appBar: AppBar(title: const Text('CallbackScreen')),
       body: Center(
         child: ElevatedButton(
           onPressed: () {
@@ -18,23 +15,27 @@ class CallbackScreen extends StatelessWidget {
             Navigator.push(
               context,
               MaterialPageRoute<void>(
-                  builder: (context) => NewCallbackScreen(callback: () {
+                builder:
+                    (context) => NewCallbackScreen(
+                      callback: () {
                         showDialog<void>(
                           context: context,
                           builder: (context) {
                             return AlertDialog(
-                              title: const Text("おめでとうございます！"),
-                              content: const Text("Callback関数が実行されました。"),
+                              title: const Text('おめでとうございます！'),
+                              content: const Text('Callback関数が実行されました。'),
                               actions: [
                                 TextButton(
-                                  child: const Text("閉じる"),
+                                  child: const Text('閉じる'),
                                   onPressed: () => Navigator.pop(context),
                                 ),
                               ],
                             );
                           },
                         );
-                      })),
+                      },
+                    ),
+              ),
             );
           },
           child: const Text('Callback関数を次の画面に渡します'),
@@ -54,10 +55,7 @@ class NewCallbackScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     // Scaffold マテリアルデザイン用のウィジェット（appBarなどを設定できる） MaterialAppの基本設定を引き継ぐ
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('CallbackScreen'),
-        automaticallyImplyLeading: true, // 戻るボタン矢印
-      ),
+      appBar: AppBar(title: const Text('CallbackScreen')),
       body: Center(
         child: ElevatedButton(
           onPressed: () {

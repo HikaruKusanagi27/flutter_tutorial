@@ -6,11 +6,12 @@ import 'package:intl/intl.dart';
 // AppDatabaseのインスタンスを生成
 final appDatabaseProvider = Provider<AppDatabase>((ref) => AppDatabase());
 
-final todoListProvider =
+final AutoDisposeStateNotifierProvider<TodoListNotifier, List<Todo>>
+todoListProvider =
     StateNotifierProvider.autoDispose<TodoListNotifier, List<Todo>>((ref) {
-  final appDatabase = ref.watch(appDatabaseProvider);
-  return TodoListNotifier(appDatabase);
-});
+      final appDatabase = ref.watch(appDatabaseProvider);
+      return TodoListNotifier(appDatabase);
+    });
 
 class TodoListNotifier extends StateNotifier<List<Todo>> {
   // `Todo`リストを空のリストとして初期化
@@ -27,14 +28,12 @@ class TodoListNotifier extends StateNotifier<List<Todo>> {
   }
 
   // `Todo`を追加する
-  Future<void> addTodo(
-    String title,
-    String content,
-    String deadline,
-  ) async {
+  Future<void> addTodo(String title, String content, String deadline) async {
     final nowDate = DateTime.now();
     final formattedDate = DateFormat('yyyy-MM-dd').format(nowDate);
-    await db.into(db.todos).insert(
+    await db
+        .into(db.todos)
+        .insert(
           TodosCompanion(
             title: Value(title),
             content: Value(content),

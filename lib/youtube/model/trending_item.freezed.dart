@@ -1,3 +1,4 @@
+// dart format width=80
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
@@ -9,258 +10,154 @@ part of 'trending_item.dart';
 // FreezedGenerator
 // **************************************************************************
 
+// dart format off
 T _$identity<T>(T value) => value;
-
-final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
-
-TrendingItem _$TrendingItemFromJson(Map<String, dynamic> json) {
-  return _TrendingItem.fromJson(json);
-}
 
 /// @nodoc
 mixin _$TrendingItem {
-  String get imagePath => throw _privateConstructorUsedError;
-  String get iconPath => throw _privateConstructorUsedError;
-  String get title => throw _privateConstructorUsedError;
-  String get channelName => throw _privateConstructorUsedError;
-  int get numOfViews => throw _privateConstructorUsedError;
-  int get daysAgo => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
-  $TrendingItemCopyWith<TrendingItem> get copyWith =>
-      throw _privateConstructorUsedError;
+ String get imagePath; String get iconPath; String get title; String get channelName; int get numOfViews; int get daysAgo;
+/// Create a copy of TrendingItem
+/// with the given fields replaced by the non-null parameter values.
+@JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+$TrendingItemCopyWith<TrendingItem> get copyWith => _$TrendingItemCopyWithImpl<TrendingItem>(this as TrendingItem, _$identity);
+
+  /// Serializes this TrendingItem to a JSON map.
+  Map<String, dynamic> toJson();
+
+
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is TrendingItem&&(identical(other.imagePath, imagePath) || other.imagePath == imagePath)&&(identical(other.iconPath, iconPath) || other.iconPath == iconPath)&&(identical(other.title, title) || other.title == title)&&(identical(other.channelName, channelName) || other.channelName == channelName)&&(identical(other.numOfViews, numOfViews) || other.numOfViews == numOfViews)&&(identical(other.daysAgo, daysAgo) || other.daysAgo == daysAgo));
+}
+
+@JsonKey(includeFromJson: false, includeToJson: false)
+@override
+int get hashCode => Object.hash(runtimeType,imagePath,iconPath,title,channelName,numOfViews,daysAgo);
+
+@override
+String toString() {
+  return 'TrendingItem(imagePath: $imagePath, iconPath: $iconPath, title: $title, channelName: $channelName, numOfViews: $numOfViews, daysAgo: $daysAgo)';
+}
+
+
 }
 
 /// @nodoc
-abstract class $TrendingItemCopyWith<$Res> {
-  factory $TrendingItemCopyWith(
-          TrendingItem value, $Res Function(TrendingItem) then) =
-      _$TrendingItemCopyWithImpl<$Res, TrendingItem>;
-  @useResult
-  $Res call(
-      {String imagePath,
-      String iconPath,
-      String title,
-      String channelName,
-      int numOfViews,
-      int daysAgo});
-}
+abstract mixin class $TrendingItemCopyWith<$Res>  {
+  factory $TrendingItemCopyWith(TrendingItem value, $Res Function(TrendingItem) _then) = _$TrendingItemCopyWithImpl;
+@useResult
+$Res call({
+ String imagePath, String iconPath, String title, String channelName, int numOfViews, int daysAgo
+});
 
+
+
+
+}
 /// @nodoc
-class _$TrendingItemCopyWithImpl<$Res, $Val extends TrendingItem>
+class _$TrendingItemCopyWithImpl<$Res>
     implements $TrendingItemCopyWith<$Res> {
-  _$TrendingItemCopyWithImpl(this._value, this._then);
+  _$TrendingItemCopyWithImpl(this._self, this._then);
 
-  // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
+  final TrendingItem _self;
+  final $Res Function(TrendingItem) _then;
 
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? imagePath = null,
-    Object? iconPath = null,
-    Object? title = null,
-    Object? channelName = null,
-    Object? numOfViews = null,
-    Object? daysAgo = null,
-  }) {
-    return _then(_value.copyWith(
-      imagePath: null == imagePath
-          ? _value.imagePath
-          : imagePath // ignore: cast_nullable_to_non_nullable
-              as String,
-      iconPath: null == iconPath
-          ? _value.iconPath
-          : iconPath // ignore: cast_nullable_to_non_nullable
-              as String,
-      title: null == title
-          ? _value.title
-          : title // ignore: cast_nullable_to_non_nullable
-              as String,
-      channelName: null == channelName
-          ? _value.channelName
-          : channelName // ignore: cast_nullable_to_non_nullable
-              as String,
-      numOfViews: null == numOfViews
-          ? _value.numOfViews
-          : numOfViews // ignore: cast_nullable_to_non_nullable
-              as int,
-      daysAgo: null == daysAgo
-          ? _value.daysAgo
-          : daysAgo // ignore: cast_nullable_to_non_nullable
-              as int,
-    ) as $Val);
-  }
+/// Create a copy of TrendingItem
+/// with the given fields replaced by the non-null parameter values.
+@pragma('vm:prefer-inline') @override $Res call({Object? imagePath = null,Object? iconPath = null,Object? title = null,Object? channelName = null,Object? numOfViews = null,Object? daysAgo = null,}) {
+  return _then(_self.copyWith(
+imagePath: null == imagePath ? _self.imagePath : imagePath // ignore: cast_nullable_to_non_nullable
+as String,iconPath: null == iconPath ? _self.iconPath : iconPath // ignore: cast_nullable_to_non_nullable
+as String,title: null == title ? _self.title : title // ignore: cast_nullable_to_non_nullable
+as String,channelName: null == channelName ? _self.channelName : channelName // ignore: cast_nullable_to_non_nullable
+as String,numOfViews: null == numOfViews ? _self.numOfViews : numOfViews // ignore: cast_nullable_to_non_nullable
+as int,daysAgo: null == daysAgo ? _self.daysAgo : daysAgo // ignore: cast_nullable_to_non_nullable
+as int,
+  ));
 }
 
-/// @nodoc
-abstract class _$$TrendingItemImplCopyWith<$Res>
-    implements $TrendingItemCopyWith<$Res> {
-  factory _$$TrendingItemImplCopyWith(
-          _$TrendingItemImpl value, $Res Function(_$TrendingItemImpl) then) =
-      __$$TrendingItemImplCopyWithImpl<$Res>;
-  @override
-  @useResult
-  $Res call(
-      {String imagePath,
-      String iconPath,
-      String title,
-      String channelName,
-      int numOfViews,
-      int daysAgo});
 }
 
-/// @nodoc
-class __$$TrendingItemImplCopyWithImpl<$Res>
-    extends _$TrendingItemCopyWithImpl<$Res, _$TrendingItemImpl>
-    implements _$$TrendingItemImplCopyWith<$Res> {
-  __$$TrendingItemImplCopyWithImpl(
-      _$TrendingItemImpl _value, $Res Function(_$TrendingItemImpl) _then)
-      : super(_value, _then);
-
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? imagePath = null,
-    Object? iconPath = null,
-    Object? title = null,
-    Object? channelName = null,
-    Object? numOfViews = null,
-    Object? daysAgo = null,
-  }) {
-    return _then(_$TrendingItemImpl(
-      imagePath: null == imagePath
-          ? _value.imagePath
-          : imagePath // ignore: cast_nullable_to_non_nullable
-              as String,
-      iconPath: null == iconPath
-          ? _value.iconPath
-          : iconPath // ignore: cast_nullable_to_non_nullable
-              as String,
-      title: null == title
-          ? _value.title
-          : title // ignore: cast_nullable_to_non_nullable
-              as String,
-      channelName: null == channelName
-          ? _value.channelName
-          : channelName // ignore: cast_nullable_to_non_nullable
-              as String,
-      numOfViews: null == numOfViews
-          ? _value.numOfViews
-          : numOfViews // ignore: cast_nullable_to_non_nullable
-              as int,
-      daysAgo: null == daysAgo
-          ? _value.daysAgo
-          : daysAgo // ignore: cast_nullable_to_non_nullable
-              as int,
-    ));
-  }
-}
 
 /// @nodoc
 @JsonSerializable()
-class _$TrendingItemImpl implements _TrendingItem {
-  const _$TrendingItemImpl(
-      {this.imagePath = '',
-      this.iconPath = '',
-      this.title = '',
-      this.channelName = '',
-      this.numOfViews = 0,
-      this.daysAgo = 0});
 
-  factory _$TrendingItemImpl.fromJson(Map<String, dynamic> json) =>
-      _$$TrendingItemImplFromJson(json);
+class _TrendingItem implements TrendingItem {
+  const _TrendingItem({this.imagePath = '', this.iconPath = '', this.title = '', this.channelName = '', this.numOfViews = 0, this.daysAgo = 0});
+  factory _TrendingItem.fromJson(Map<String, dynamic> json) => _$TrendingItemFromJson(json);
 
-  @override
-  @JsonKey()
-  final String imagePath;
-  @override
-  @JsonKey()
-  final String iconPath;
-  @override
-  @JsonKey()
-  final String title;
-  @override
-  @JsonKey()
-  final String channelName;
-  @override
-  @JsonKey()
-  final int numOfViews;
-  @override
-  @JsonKey()
-  final int daysAgo;
+@override@JsonKey() final  String imagePath;
+@override@JsonKey() final  String iconPath;
+@override@JsonKey() final  String title;
+@override@JsonKey() final  String channelName;
+@override@JsonKey() final  int numOfViews;
+@override@JsonKey() final  int daysAgo;
 
-  @override
-  String toString() {
-    return 'TrendingItem(imagePath: $imagePath, iconPath: $iconPath, title: $title, channelName: $channelName, numOfViews: $numOfViews, daysAgo: $daysAgo)';
-  }
+/// Create a copy of TrendingItem
+/// with the given fields replaced by the non-null parameter values.
+@override @JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+_$TrendingItemCopyWith<_TrendingItem> get copyWith => __$TrendingItemCopyWithImpl<_TrendingItem>(this, _$identity);
 
-  @override
-  bool operator ==(dynamic other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$TrendingItemImpl &&
-            (identical(other.imagePath, imagePath) ||
-                other.imagePath == imagePath) &&
-            (identical(other.iconPath, iconPath) ||
-                other.iconPath == iconPath) &&
-            (identical(other.title, title) || other.title == title) &&
-            (identical(other.channelName, channelName) ||
-                other.channelName == channelName) &&
-            (identical(other.numOfViews, numOfViews) ||
-                other.numOfViews == numOfViews) &&
-            (identical(other.daysAgo, daysAgo) || other.daysAgo == daysAgo));
-  }
-
-  @JsonKey(ignore: true)
-  @override
-  int get hashCode => Object.hash(runtimeType, imagePath, iconPath, title,
-      channelName, numOfViews, daysAgo);
-
-  @JsonKey(ignore: true)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$TrendingItemImplCopyWith<_$TrendingItemImpl> get copyWith =>
-      __$$TrendingItemImplCopyWithImpl<_$TrendingItemImpl>(this, _$identity);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$TrendingItemImplToJson(
-      this,
-    );
-  }
+@override
+Map<String, dynamic> toJson() {
+  return _$TrendingItemToJson(this, );
 }
 
-abstract class _TrendingItem implements TrendingItem {
-  const factory _TrendingItem(
-      {final String imagePath,
-      final String iconPath,
-      final String title,
-      final String channelName,
-      final int numOfViews,
-      final int daysAgo}) = _$TrendingItemImpl;
-
-  factory _TrendingItem.fromJson(Map<String, dynamic> json) =
-      _$TrendingItemImpl.fromJson;
-
-  @override
-  String get imagePath;
-  @override
-  String get iconPath;
-  @override
-  String get title;
-  @override
-  String get channelName;
-  @override
-  int get numOfViews;
-  @override
-  int get daysAgo;
-  @override
-  @JsonKey(ignore: true)
-  _$$TrendingItemImplCopyWith<_$TrendingItemImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is _TrendingItem&&(identical(other.imagePath, imagePath) || other.imagePath == imagePath)&&(identical(other.iconPath, iconPath) || other.iconPath == iconPath)&&(identical(other.title, title) || other.title == title)&&(identical(other.channelName, channelName) || other.channelName == channelName)&&(identical(other.numOfViews, numOfViews) || other.numOfViews == numOfViews)&&(identical(other.daysAgo, daysAgo) || other.daysAgo == daysAgo));
 }
+
+@JsonKey(includeFromJson: false, includeToJson: false)
+@override
+int get hashCode => Object.hash(runtimeType,imagePath,iconPath,title,channelName,numOfViews,daysAgo);
+
+@override
+String toString() {
+  return 'TrendingItem(imagePath: $imagePath, iconPath: $iconPath, title: $title, channelName: $channelName, numOfViews: $numOfViews, daysAgo: $daysAgo)';
+}
+
+
+}
+
+/// @nodoc
+abstract mixin class _$TrendingItemCopyWith<$Res> implements $TrendingItemCopyWith<$Res> {
+  factory _$TrendingItemCopyWith(_TrendingItem value, $Res Function(_TrendingItem) _then) = __$TrendingItemCopyWithImpl;
+@override @useResult
+$Res call({
+ String imagePath, String iconPath, String title, String channelName, int numOfViews, int daysAgo
+});
+
+
+
+
+}
+/// @nodoc
+class __$TrendingItemCopyWithImpl<$Res>
+    implements _$TrendingItemCopyWith<$Res> {
+  __$TrendingItemCopyWithImpl(this._self, this._then);
+
+  final _TrendingItem _self;
+  final $Res Function(_TrendingItem) _then;
+
+/// Create a copy of TrendingItem
+/// with the given fields replaced by the non-null parameter values.
+@override @pragma('vm:prefer-inline') $Res call({Object? imagePath = null,Object? iconPath = null,Object? title = null,Object? channelName = null,Object? numOfViews = null,Object? daysAgo = null,}) {
+  return _then(_TrendingItem(
+imagePath: null == imagePath ? _self.imagePath : imagePath // ignore: cast_nullable_to_non_nullable
+as String,iconPath: null == iconPath ? _self.iconPath : iconPath // ignore: cast_nullable_to_non_nullable
+as String,title: null == title ? _self.title : title // ignore: cast_nullable_to_non_nullable
+as String,channelName: null == channelName ? _self.channelName : channelName // ignore: cast_nullable_to_non_nullable
+as String,numOfViews: null == numOfViews ? _self.numOfViews : numOfViews // ignore: cast_nullable_to_non_nullable
+as int,daysAgo: null == daysAgo ? _self.daysAgo : daysAgo // ignore: cast_nullable_to_non_nullable
+as int,
+  ));
+}
+
+
+}
+
+// dart format on

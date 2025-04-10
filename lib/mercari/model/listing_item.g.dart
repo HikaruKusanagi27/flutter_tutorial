@@ -6,15 +6,14 @@ part of 'listing_item.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$ListingItemImpl _$$ListingItemImplFromJson(Map<String, dynamic> json) =>
-    _$ListingItemImpl(
-      imagePath: json['imagePath'] as String? ?? '',
-      title: json['title'] as String? ?? '',
-      price: json['price'] as int? ?? 0,
-      userCount: json['userCount'] as int? ?? 0,
-    );
+_ListingItem _$ListingItemFromJson(Map<String, dynamic> json) => _ListingItem(
+  imagePath: json['imagePath'] as String? ?? '',
+  title: json['title'] as String? ?? '',
+  price: (json['price'] as num?)?.toInt() ?? 0,
+  userCount: (json['userCount'] as num?)?.toInt() ?? 0,
+);
 
-Map<String, dynamic> _$$ListingItemImplToJson(_$ListingItemImpl instance) =>
+Map<String, dynamic> _$ListingItemToJson(_ListingItem instance) =>
     <String, dynamic>{
       'imagePath': instance.imagePath,
       'title': instance.title,

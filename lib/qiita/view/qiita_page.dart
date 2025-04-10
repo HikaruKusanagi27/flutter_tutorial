@@ -12,31 +12,34 @@ class QiitaPage extends ConsumerWidget {
     final notifier = ref.read(qiitaViewModelProvider.notifier);
 
     return Scaffold(
-      body: WillPopScope(
-        onWillPop: state.isReadyData
-            ? () {
-                notifier.onBackHome();
-                return Future.value(false);
-              }
-            : null,
+      body: PopScope(
+        canPop: !state.isReadyData,
+        onPopInvokedWithResult:
+            state.isReadyData
+                ? (bool didPop, Object? result) {
+                  if (didPop) {
+                    return;
+                  }
+                  notifier.onBackHome();
+                }
+                : null,
         child: Stack(
           children: [
             Center(
-              child: state.isReadyData
-                  ? _QiitaList(state.qiitaItems)
-                  : _SearchButtons(
-                      onTapFlutter: () => notifier.fetchQiitaItems('flutter'),
-                      onTapAndroid: () => notifier.fetchQiitaItems('android'),
-                      onTapiOS: () => notifier.fetchQiitaItems('iOS'),
-                    ),
+              child:
+                  state.isReadyData
+                      ? _QiitaList(state.qiitaItems)
+                      : _SearchButtons(
+                        onTapFlutter: () => notifier.fetchQiitaItems('flutter'),
+                        onTapAndroid: () => notifier.fetchQiitaItems('android'),
+                        onTapiOS: () => notifier.fetchQiitaItems('iOS'),
+                      ),
             ),
             Visibility(
               visible: state.isLoading,
               child: const ColoredBox(
                 color: Color(0x88000000),
-                child: Center(
-                  child: CircularProgressIndicator(),
-                ),
+                child: Center(child: CircularProgressIndicator()),
               ),
             ),
           ],
@@ -59,10 +62,7 @@ class _QiitaList extends StatelessWidget {
         final item = _list[index];
 
         return Container(
-          padding: const EdgeInsets.symmetric(
-            vertical: 4,
-            horizontal: 4,
-          ),
+          padding: const EdgeInsets.symmetric(vertical: 4, horizontal: 4),
           child: Card(
             elevation: 4,
             color: Colors.white,
@@ -71,18 +71,13 @@ class _QiitaList extends StatelessWidget {
               padding: const EdgeInsets.all(16),
               child: Row(
                 children: [
-                  Image.network(
-                    item.user?.profileImageUrl ?? '',
-                    height: 64,
-                  ),
+                  Image.network(item.user?.profileImageUrl ?? '', height: 64),
                   const SizedBox(width: 16),
                   Flexible(
                     child: Text(
                       item.title ?? '',
                       maxLines: 3,
-                      style: const TextStyle(
-                        overflow: TextOverflow.ellipsis,
-                      ),
+                      style: const TextStyle(overflow: TextOverflow.ellipsis),
                     ),
                   ),
                 ],
@@ -96,11 +91,7 @@ class _QiitaList extends StatelessWidget {
 }
 
 class _SearchButtons extends StatelessWidget {
-  const _SearchButtons({
-    this.onTapFlutter,
-    this.onTapAndroid,
-    this.onTapiOS,
-  });
+  const _SearchButtons({this.onTapFlutter, this.onTapAndroid, this.onTapiOS});
 
   final VoidCallback? onTapFlutter;
   final VoidCallback? onTapAndroid;
@@ -111,24 +102,9 @@ class _SearchButtons extends StatelessWidget {
     return Column(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        ElevatedButton(
-          onPressed: onTapFlutter,
-          child: const Text(
-            'Flutter',
-          ),
-        ),
-        ElevatedButton(
-          onPressed: onTapAndroid,
-          child: const Text(
-            'android',
-          ),
-        ),
-        ElevatedButton(
-          onPressed: onTapiOS,
-          child: const Text(
-            'iOS',
-          ),
-        ),
+        ElevatedButton(onPressed: onTapFlutter, child: const Text('Flutter')),
+        ElevatedButton(onPressed: onTapAndroid, child: const Text('android')),
+        ElevatedButton(onPressed: onTapiOS, child: const Text('iOS')),
       ],
     );
   }

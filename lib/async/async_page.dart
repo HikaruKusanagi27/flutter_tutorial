@@ -11,9 +11,9 @@ class AsyncPage extends StatefulWidget {
 
 class _AsyncPageState extends State<AsyncPage> {
   // 初期値
-  String _name = '未設定';
-  String _age = '未設定';
-  String _birthday = '未設定';
+  var _name = '未設定';
+  var _age = '未設定';
+  var _birthday = '未設定';
   // SharedPreferencesのインスタンスを取得
   final Future<SharedPreferences> _prefs = SharedPreferences.getInstance();
 
@@ -41,18 +41,9 @@ class _AsyncPageState extends State<AsyncPage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text(
-              '名前：$_name',
-              style: const TextStyle(fontSize: 20),
-            ),
-            Text(
-              '年齢：$_age',
-              style: const TextStyle(fontSize: 20),
-            ),
-            Text(
-              '誕生日：$_birthday',
-              style: const TextStyle(fontSize: 20),
-            ),
+            Text('名前：$_name', style: const TextStyle(fontSize: 20)),
+            Text('年齢：$_age', style: const TextStyle(fontSize: 20)),
+            Text('誕生日：$_birthday', style: const TextStyle(fontSize: 20)),
           ],
         ),
       ),
@@ -62,20 +53,18 @@ class _AsyncPageState extends State<AsyncPage> {
             context: context,
             builder: (context) {
               // ボタンのみでダイアログを閉じるように
-              return WillPopScope(
+              return PopScope(
+                canPop: false,
                 child: EditDialog(
                   onSave: (String name, String age, String birthday) async {
                     await _getSavedData();
                   },
                 ),
-                onWillPop: () async => false,
               );
             },
           );
         },
-        child: const Icon(
-          Icons.add,
-        ),
+        child: const Icon(Icons.add),
       ),
     );
   }

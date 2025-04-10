@@ -2,16 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class EditDialog extends StatefulWidget {
-  const EditDialog({
-    super.key,
-    required this.onSave,
-  });
+  const EditDialog({super.key, required this.onSave});
 
-  final Future<void> Function(
-    String name,
-    String age,
-    String birthday,
-  ) onSave;
+  final Future<void> Function(String name, String age, String birthday) onSave;
 
   @override
   State<EditDialog> createState() => _EditDialogState();
@@ -76,12 +69,7 @@ class _EditDialogState extends State<EditDialog> {
             crossAxisAlignment: CrossAxisAlignment.start,
             mainAxisSize: MainAxisSize.min,
             children: [
-              const Text(
-                '登録',
-                style: TextStyle(
-                  fontSize: 26,
-                ),
-              ),
+              const Text('登録', style: TextStyle(fontSize: 26)),
               const SizedBox(height: 12),
               _EditTextFormField(
                 label: '名前',
@@ -106,18 +94,15 @@ class _EditDialogState extends State<EditDialog> {
                     onPressed: () {
                       Navigator.pop(context);
                     },
-                    child: const Text(
-                      'Cancel',
-                      style: TextStyle(
-                        fontSize: 16,
-                      ),
-                    ),
+                    child: const Text('Cancel', style: TextStyle(fontSize: 16)),
                   ),
                   const SizedBox(width: 8),
                   ElevatedButton(
                     onPressed: () async {
                       // バリデーションチェック
                       if (_formKey.currentState!.validate()) {
+                        // _formKeyとcontextをローカル変数に保存
+                        final navigator = Navigator.of(context);
                         await _saveData();
                         // 保存処理成功した後入力情報を渡す
                         await widget.onSave(
@@ -127,16 +112,11 @@ class _EditDialogState extends State<EditDialog> {
                         );
                         // 非同期処理の完了後ダイアログを閉じる
                         if (mounted) {
-                          Navigator.pop(context);
+                          navigator.pop();
                         }
                       }
                     },
-                    child: const Text(
-                      '保存',
-                      style: TextStyle(
-                        fontSize: 16,
-                      ),
-                    ),
+                    child: const Text('保存', style: TextStyle(fontSize: 16)),
                   ),
                 ],
               ),
@@ -168,9 +148,7 @@ class _EditTextFormField extends StatelessWidget {
         labelText: label,
         labelStyle: const TextStyle(fontSize: 20),
       ),
-      style: const TextStyle(
-        fontSize: 22,
-      ),
+      style: const TextStyle(fontSize: 22),
       validator: validator,
     );
   }

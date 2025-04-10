@@ -5,7 +5,7 @@ part 'property_item.freezed.dart';
 part 'property_item.g.dart';
 
 @freezed
-class PropertyItem with _$PropertyItem {
+abstract class PropertyItem with _$PropertyItem {
   const factory PropertyItem({
     @Default('') String imagePath,
     @Default('') String imagePath2,

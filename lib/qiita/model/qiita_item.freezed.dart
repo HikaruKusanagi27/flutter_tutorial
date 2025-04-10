@@ -1,3 +1,4 @@
+// dart format width=80
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
@@ -9,188 +10,166 @@ part of 'qiita_item.dart';
 // FreezedGenerator
 // **************************************************************************
 
+// dart format off
 T _$identity<T>(T value) => value;
-
-final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
-
-QiitaItem _$QiitaItemFromJson(Map<String, dynamic> json) {
-  return _QiitaItem.fromJson(json);
-}
 
 /// @nodoc
 mixin _$QiitaItem {
-  @JsonKey(name: 'title')
-  String? get title => throw _privateConstructorUsedError;
-  @JsonKey(name: 'user')
-  QiitaUser? get user => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
-  $QiitaItemCopyWith<QiitaItem> get copyWith =>
-      throw _privateConstructorUsedError;
+@JsonKey(name: 'title') String? get title;@JsonKey(name: 'user') QiitaUser? get user;
+/// Create a copy of QiitaItem
+/// with the given fields replaced by the non-null parameter values.
+@JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+$QiitaItemCopyWith<QiitaItem> get copyWith => _$QiitaItemCopyWithImpl<QiitaItem>(this as QiitaItem, _$identity);
+
+  /// Serializes this QiitaItem to a JSON map.
+  Map<String, dynamic> toJson();
+
+
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is QiitaItem&&(identical(other.title, title) || other.title == title)&&(identical(other.user, user) || other.user == user));
+}
+
+@JsonKey(includeFromJson: false, includeToJson: false)
+@override
+int get hashCode => Object.hash(runtimeType,title,user);
+
+@override
+String toString() {
+  return 'QiitaItem(title: $title, user: $user)';
+}
+
+
 }
 
 /// @nodoc
-abstract class $QiitaItemCopyWith<$Res> {
-  factory $QiitaItemCopyWith(QiitaItem value, $Res Function(QiitaItem) then) =
-      _$QiitaItemCopyWithImpl<$Res, QiitaItem>;
-  @useResult
-  $Res call(
-      {@JsonKey(name: 'title') String? title,
-      @JsonKey(name: 'user') QiitaUser? user});
+abstract mixin class $QiitaItemCopyWith<$Res>  {
+  factory $QiitaItemCopyWith(QiitaItem value, $Res Function(QiitaItem) _then) = _$QiitaItemCopyWithImpl;
+@useResult
+$Res call({
+@JsonKey(name: 'title') String? title,@JsonKey(name: 'user') QiitaUser? user
+});
 
-  $QiitaUserCopyWith<$Res>? get user;
+
+$QiitaUserCopyWith<$Res>? get user;
+
 }
-
 /// @nodoc
-class _$QiitaItemCopyWithImpl<$Res, $Val extends QiitaItem>
+class _$QiitaItemCopyWithImpl<$Res>
     implements $QiitaItemCopyWith<$Res> {
-  _$QiitaItemCopyWithImpl(this._value, this._then);
+  _$QiitaItemCopyWithImpl(this._self, this._then);
 
-  // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
+  final QiitaItem _self;
+  final $Res Function(QiitaItem) _then;
 
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? title = freezed,
-    Object? user = freezed,
-  }) {
-    return _then(_value.copyWith(
-      title: freezed == title
-          ? _value.title
-          : title // ignore: cast_nullable_to_non_nullable
-              as String?,
-      user: freezed == user
-          ? _value.user
-          : user // ignore: cast_nullable_to_non_nullable
-              as QiitaUser?,
-    ) as $Val);
+/// Create a copy of QiitaItem
+/// with the given fields replaced by the non-null parameter values.
+@pragma('vm:prefer-inline') @override $Res call({Object? title = freezed,Object? user = freezed,}) {
+  return _then(_self.copyWith(
+title: freezed == title ? _self.title : title // ignore: cast_nullable_to_non_nullable
+as String?,user: freezed == user ? _self.user : user // ignore: cast_nullable_to_non_nullable
+as QiitaUser?,
+  ));
+}
+/// Create a copy of QiitaItem
+/// with the given fields replaced by the non-null parameter values.
+@override
+@pragma('vm:prefer-inline')
+$QiitaUserCopyWith<$Res>? get user {
+    if (_self.user == null) {
+    return null;
   }
 
-  @override
-  @pragma('vm:prefer-inline')
-  $QiitaUserCopyWith<$Res>? get user {
-    if (_value.user == null) {
-      return null;
-    }
-
-    return $QiitaUserCopyWith<$Res>(_value.user!, (value) {
-      return _then(_value.copyWith(user: value) as $Val);
-    });
-  }
+  return $QiitaUserCopyWith<$Res>(_self.user!, (value) {
+    return _then(_self.copyWith(user: value));
+  });
+}
 }
 
-/// @nodoc
-abstract class _$$QiitaItemImplCopyWith<$Res>
-    implements $QiitaItemCopyWith<$Res> {
-  factory _$$QiitaItemImplCopyWith(
-          _$QiitaItemImpl value, $Res Function(_$QiitaItemImpl) then) =
-      __$$QiitaItemImplCopyWithImpl<$Res>;
-  @override
-  @useResult
-  $Res call(
-      {@JsonKey(name: 'title') String? title,
-      @JsonKey(name: 'user') QiitaUser? user});
-
-  @override
-  $QiitaUserCopyWith<$Res>? get user;
-}
-
-/// @nodoc
-class __$$QiitaItemImplCopyWithImpl<$Res>
-    extends _$QiitaItemCopyWithImpl<$Res, _$QiitaItemImpl>
-    implements _$$QiitaItemImplCopyWith<$Res> {
-  __$$QiitaItemImplCopyWithImpl(
-      _$QiitaItemImpl _value, $Res Function(_$QiitaItemImpl) _then)
-      : super(_value, _then);
-
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? title = freezed,
-    Object? user = freezed,
-  }) {
-    return _then(_$QiitaItemImpl(
-      title: freezed == title
-          ? _value.title
-          : title // ignore: cast_nullable_to_non_nullable
-              as String?,
-      user: freezed == user
-          ? _value.user
-          : user // ignore: cast_nullable_to_non_nullable
-              as QiitaUser?,
-    ));
-  }
-}
 
 /// @nodoc
 @JsonSerializable()
-class _$QiitaItemImpl implements _QiitaItem {
-  const _$QiitaItemImpl(
-      {@JsonKey(name: 'title') this.title, @JsonKey(name: 'user') this.user});
 
-  factory _$QiitaItemImpl.fromJson(Map<String, dynamic> json) =>
-      _$$QiitaItemImplFromJson(json);
+class _QiitaItem implements QiitaItem {
+  const _QiitaItem({@JsonKey(name: 'title') this.title, @JsonKey(name: 'user') this.user});
+  factory _QiitaItem.fromJson(Map<String, dynamic> json) => _$QiitaItemFromJson(json);
 
-  @override
-  @JsonKey(name: 'title')
-  final String? title;
-  @override
-  @JsonKey(name: 'user')
-  final QiitaUser? user;
+@override@JsonKey(name: 'title') final  String? title;
+@override@JsonKey(name: 'user') final  QiitaUser? user;
 
-  @override
-  String toString() {
-    return 'QiitaItem(title: $title, user: $user)';
-  }
+/// Create a copy of QiitaItem
+/// with the given fields replaced by the non-null parameter values.
+@override @JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+_$QiitaItemCopyWith<_QiitaItem> get copyWith => __$QiitaItemCopyWithImpl<_QiitaItem>(this, _$identity);
 
-  @override
-  bool operator ==(dynamic other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$QiitaItemImpl &&
-            (identical(other.title, title) || other.title == title) &&
-            (identical(other.user, user) || other.user == user));
-  }
-
-  @JsonKey(ignore: true)
-  @override
-  int get hashCode => Object.hash(runtimeType, title, user);
-
-  @JsonKey(ignore: true)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$QiitaItemImplCopyWith<_$QiitaItemImpl> get copyWith =>
-      __$$QiitaItemImplCopyWithImpl<_$QiitaItemImpl>(this, _$identity);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$QiitaItemImplToJson(
-      this,
-    );
-  }
+@override
+Map<String, dynamic> toJson() {
+  return _$QiitaItemToJson(this, );
 }
 
-abstract class _QiitaItem implements QiitaItem {
-  const factory _QiitaItem(
-      {@JsonKey(name: 'title') final String? title,
-      @JsonKey(name: 'user') final QiitaUser? user}) = _$QiitaItemImpl;
-
-  factory _QiitaItem.fromJson(Map<String, dynamic> json) =
-      _$QiitaItemImpl.fromJson;
-
-  @override
-  @JsonKey(name: 'title')
-  String? get title;
-  @override
-  @JsonKey(name: 'user')
-  QiitaUser? get user;
-  @override
-  @JsonKey(ignore: true)
-  _$$QiitaItemImplCopyWith<_$QiitaItemImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is _QiitaItem&&(identical(other.title, title) || other.title == title)&&(identical(other.user, user) || other.user == user));
 }
+
+@JsonKey(includeFromJson: false, includeToJson: false)
+@override
+int get hashCode => Object.hash(runtimeType,title,user);
+
+@override
+String toString() {
+  return 'QiitaItem(title: $title, user: $user)';
+}
+
+
+}
+
+/// @nodoc
+abstract mixin class _$QiitaItemCopyWith<$Res> implements $QiitaItemCopyWith<$Res> {
+  factory _$QiitaItemCopyWith(_QiitaItem value, $Res Function(_QiitaItem) _then) = __$QiitaItemCopyWithImpl;
+@override @useResult
+$Res call({
+@JsonKey(name: 'title') String? title,@JsonKey(name: 'user') QiitaUser? user
+});
+
+
+@override $QiitaUserCopyWith<$Res>? get user;
+
+}
+/// @nodoc
+class __$QiitaItemCopyWithImpl<$Res>
+    implements _$QiitaItemCopyWith<$Res> {
+  __$QiitaItemCopyWithImpl(this._self, this._then);
+
+  final _QiitaItem _self;
+  final $Res Function(_QiitaItem) _then;
+
+/// Create a copy of QiitaItem
+/// with the given fields replaced by the non-null parameter values.
+@override @pragma('vm:prefer-inline') $Res call({Object? title = freezed,Object? user = freezed,}) {
+  return _then(_QiitaItem(
+title: freezed == title ? _self.title : title // ignore: cast_nullable_to_non_nullable
+as String?,user: freezed == user ? _self.user : user // ignore: cast_nullable_to_non_nullable
+as QiitaUser?,
+  ));
+}
+
+/// Create a copy of QiitaItem
+/// with the given fields replaced by the non-null parameter values.
+@override
+@pragma('vm:prefer-inline')
+$QiitaUserCopyWith<$Res>? get user {
+    if (_self.user == null) {
+    return null;
+  }
+
+  return $QiitaUserCopyWith<$Res>(_self.user!, (value) {
+    return _then(_self.copyWith(user: value));
+  });
+}
+}
+
+// dart format on

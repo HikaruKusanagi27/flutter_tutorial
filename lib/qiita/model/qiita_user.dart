@@ -5,7 +5,7 @@ part 'qiita_user.freezed.dart';
 part 'qiita_user.g.dart';
 
 @freezed
-class QiitaUser with _$QiitaUser {
+abstract class QiitaUser with _$QiitaUser {
   const factory QiitaUser({
     @JsonKey(name: 'profile_image_url') String? profileImageUrl,
   }) = _QiitaUser;

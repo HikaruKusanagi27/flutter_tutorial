@@ -5,7 +5,7 @@ part 'trending_item.freezed.dart';
 part 'trending_item.g.dart';
 
 @freezed
-class TrendingItem with _$TrendingItem {
+abstract class TrendingItem with _$TrendingItem {
   const factory TrendingItem({
     @Default('') String imagePath,
     @Default('') String iconPath,

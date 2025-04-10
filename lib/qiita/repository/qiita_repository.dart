@@ -10,15 +10,13 @@ final dioProvider = Provider<Dio>((_) {
 });
 
 // QiitaApiClient のインスタンス生成
-final qiitaApiClientProvider = Provider((ref) {
+final Provider<QiitaApiClient> qiitaApiClientProvider = Provider((ref) {
   final dio = ref.read(dioProvider);
   return QiitaApiClient(dio);
 });
 
 // QiitaRepository のインスタンス生成
-final qiitaRepositoryProvider = Provider<QiitaRepository>(
-  QiitaRepository.new,
-);
+final qiitaRepositoryProvider = Provider<QiitaRepository>(QiitaRepository.new);
 
 // Qiitaのアイテムを取得する
 class QiitaRepository {
@@ -28,7 +26,7 @@ class QiitaRepository {
 
   QiitaApiClient get _apiClient => _ref.read(qiitaApiClientProvider);
 
-  Future<List<QiitaItem>> fetchQiitaItems(String tag) async {
+  Future<List<QiitaItem>> fetchQiitaItems(String tag) {
     return _apiClient.fetchQiitaItems(tag);
   }
 }

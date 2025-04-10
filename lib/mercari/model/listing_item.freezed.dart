@@ -1,3 +1,4 @@
+// dart format width=80
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
@@ -9,206 +10,148 @@ part of 'listing_item.dart';
 // FreezedGenerator
 // **************************************************************************
 
+// dart format off
 T _$identity<T>(T value) => value;
-
-final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
-
-ListingItem _$ListingItemFromJson(Map<String, dynamic> json) {
-  return _ListingItem.fromJson(json);
-}
 
 /// @nodoc
 mixin _$ListingItem {
-  String get imagePath => throw _privateConstructorUsedError;
-  String get title => throw _privateConstructorUsedError;
-  int get price => throw _privateConstructorUsedError;
-  int get userCount => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
-  $ListingItemCopyWith<ListingItem> get copyWith =>
-      throw _privateConstructorUsedError;
+ String get imagePath; String get title; int get price; int get userCount;
+/// Create a copy of ListingItem
+/// with the given fields replaced by the non-null parameter values.
+@JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+$ListingItemCopyWith<ListingItem> get copyWith => _$ListingItemCopyWithImpl<ListingItem>(this as ListingItem, _$identity);
+
+  /// Serializes this ListingItem to a JSON map.
+  Map<String, dynamic> toJson();
+
+
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is ListingItem&&(identical(other.imagePath, imagePath) || other.imagePath == imagePath)&&(identical(other.title, title) || other.title == title)&&(identical(other.price, price) || other.price == price)&&(identical(other.userCount, userCount) || other.userCount == userCount));
+}
+
+@JsonKey(includeFromJson: false, includeToJson: false)
+@override
+int get hashCode => Object.hash(runtimeType,imagePath,title,price,userCount);
+
+@override
+String toString() {
+  return 'ListingItem(imagePath: $imagePath, title: $title, price: $price, userCount: $userCount)';
+}
+
+
 }
 
 /// @nodoc
-abstract class $ListingItemCopyWith<$Res> {
-  factory $ListingItemCopyWith(
-          ListingItem value, $Res Function(ListingItem) then) =
-      _$ListingItemCopyWithImpl<$Res, ListingItem>;
-  @useResult
-  $Res call({String imagePath, String title, int price, int userCount});
-}
+abstract mixin class $ListingItemCopyWith<$Res>  {
+  factory $ListingItemCopyWith(ListingItem value, $Res Function(ListingItem) _then) = _$ListingItemCopyWithImpl;
+@useResult
+$Res call({
+ String imagePath, String title, int price, int userCount
+});
 
+
+
+
+}
 /// @nodoc
-class _$ListingItemCopyWithImpl<$Res, $Val extends ListingItem>
+class _$ListingItemCopyWithImpl<$Res>
     implements $ListingItemCopyWith<$Res> {
-  _$ListingItemCopyWithImpl(this._value, this._then);
+  _$ListingItemCopyWithImpl(this._self, this._then);
 
-  // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
+  final ListingItem _self;
+  final $Res Function(ListingItem) _then;
 
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? imagePath = null,
-    Object? title = null,
-    Object? price = null,
-    Object? userCount = null,
-  }) {
-    return _then(_value.copyWith(
-      imagePath: null == imagePath
-          ? _value.imagePath
-          : imagePath // ignore: cast_nullable_to_non_nullable
-              as String,
-      title: null == title
-          ? _value.title
-          : title // ignore: cast_nullable_to_non_nullable
-              as String,
-      price: null == price
-          ? _value.price
-          : price // ignore: cast_nullable_to_non_nullable
-              as int,
-      userCount: null == userCount
-          ? _value.userCount
-          : userCount // ignore: cast_nullable_to_non_nullable
-              as int,
-    ) as $Val);
-  }
+/// Create a copy of ListingItem
+/// with the given fields replaced by the non-null parameter values.
+@pragma('vm:prefer-inline') @override $Res call({Object? imagePath = null,Object? title = null,Object? price = null,Object? userCount = null,}) {
+  return _then(_self.copyWith(
+imagePath: null == imagePath ? _self.imagePath : imagePath // ignore: cast_nullable_to_non_nullable
+as String,title: null == title ? _self.title : title // ignore: cast_nullable_to_non_nullable
+as String,price: null == price ? _self.price : price // ignore: cast_nullable_to_non_nullable
+as int,userCount: null == userCount ? _self.userCount : userCount // ignore: cast_nullable_to_non_nullable
+as int,
+  ));
 }
 
-/// @nodoc
-abstract class _$$ListingItemImplCopyWith<$Res>
-    implements $ListingItemCopyWith<$Res> {
-  factory _$$ListingItemImplCopyWith(
-          _$ListingItemImpl value, $Res Function(_$ListingItemImpl) then) =
-      __$$ListingItemImplCopyWithImpl<$Res>;
-  @override
-  @useResult
-  $Res call({String imagePath, String title, int price, int userCount});
 }
 
-/// @nodoc
-class __$$ListingItemImplCopyWithImpl<$Res>
-    extends _$ListingItemCopyWithImpl<$Res, _$ListingItemImpl>
-    implements _$$ListingItemImplCopyWith<$Res> {
-  __$$ListingItemImplCopyWithImpl(
-      _$ListingItemImpl _value, $Res Function(_$ListingItemImpl) _then)
-      : super(_value, _then);
-
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? imagePath = null,
-    Object? title = null,
-    Object? price = null,
-    Object? userCount = null,
-  }) {
-    return _then(_$ListingItemImpl(
-      imagePath: null == imagePath
-          ? _value.imagePath
-          : imagePath // ignore: cast_nullable_to_non_nullable
-              as String,
-      title: null == title
-          ? _value.title
-          : title // ignore: cast_nullable_to_non_nullable
-              as String,
-      price: null == price
-          ? _value.price
-          : price // ignore: cast_nullable_to_non_nullable
-              as int,
-      userCount: null == userCount
-          ? _value.userCount
-          : userCount // ignore: cast_nullable_to_non_nullable
-              as int,
-    ));
-  }
-}
 
 /// @nodoc
 @JsonSerializable()
-class _$ListingItemImpl implements _ListingItem {
-  const _$ListingItemImpl(
-      {this.imagePath = '',
-      this.title = '',
-      this.price = 0,
-      this.userCount = 0});
 
-  factory _$ListingItemImpl.fromJson(Map<String, dynamic> json) =>
-      _$$ListingItemImplFromJson(json);
+class _ListingItem implements ListingItem {
+  const _ListingItem({this.imagePath = '', this.title = '', this.price = 0, this.userCount = 0});
+  factory _ListingItem.fromJson(Map<String, dynamic> json) => _$ListingItemFromJson(json);
 
-  @override
-  @JsonKey()
-  final String imagePath;
-  @override
-  @JsonKey()
-  final String title;
-  @override
-  @JsonKey()
-  final int price;
-  @override
-  @JsonKey()
-  final int userCount;
+@override@JsonKey() final  String imagePath;
+@override@JsonKey() final  String title;
+@override@JsonKey() final  int price;
+@override@JsonKey() final  int userCount;
 
-  @override
-  String toString() {
-    return 'ListingItem(imagePath: $imagePath, title: $title, price: $price, userCount: $userCount)';
-  }
+/// Create a copy of ListingItem
+/// with the given fields replaced by the non-null parameter values.
+@override @JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+_$ListingItemCopyWith<_ListingItem> get copyWith => __$ListingItemCopyWithImpl<_ListingItem>(this, _$identity);
 
-  @override
-  bool operator ==(dynamic other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$ListingItemImpl &&
-            (identical(other.imagePath, imagePath) ||
-                other.imagePath == imagePath) &&
-            (identical(other.title, title) || other.title == title) &&
-            (identical(other.price, price) || other.price == price) &&
-            (identical(other.userCount, userCount) ||
-                other.userCount == userCount));
-  }
-
-  @JsonKey(ignore: true)
-  @override
-  int get hashCode =>
-      Object.hash(runtimeType, imagePath, title, price, userCount);
-
-  @JsonKey(ignore: true)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$ListingItemImplCopyWith<_$ListingItemImpl> get copyWith =>
-      __$$ListingItemImplCopyWithImpl<_$ListingItemImpl>(this, _$identity);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$ListingItemImplToJson(
-      this,
-    );
-  }
+@override
+Map<String, dynamic> toJson() {
+  return _$ListingItemToJson(this, );
 }
 
-abstract class _ListingItem implements ListingItem {
-  const factory _ListingItem(
-      {final String imagePath,
-      final String title,
-      final int price,
-      final int userCount}) = _$ListingItemImpl;
-
-  factory _ListingItem.fromJson(Map<String, dynamic> json) =
-      _$ListingItemImpl.fromJson;
-
-  @override
-  String get imagePath;
-  @override
-  String get title;
-  @override
-  int get price;
-  @override
-  int get userCount;
-  @override
-  @JsonKey(ignore: true)
-  _$$ListingItemImplCopyWith<_$ListingItemImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is _ListingItem&&(identical(other.imagePath, imagePath) || other.imagePath == imagePath)&&(identical(other.title, title) || other.title == title)&&(identical(other.price, price) || other.price == price)&&(identical(other.userCount, userCount) || other.userCount == userCount));
 }
+
+@JsonKey(includeFromJson: false, includeToJson: false)
+@override
+int get hashCode => Object.hash(runtimeType,imagePath,title,price,userCount);
+
+@override
+String toString() {
+  return 'ListingItem(imagePath: $imagePath, title: $title, price: $price, userCount: $userCount)';
+}
+
+
+}
+
+/// @nodoc
+abstract mixin class _$ListingItemCopyWith<$Res> implements $ListingItemCopyWith<$Res> {
+  factory _$ListingItemCopyWith(_ListingItem value, $Res Function(_ListingItem) _then) = __$ListingItemCopyWithImpl;
+@override @useResult
+$Res call({
+ String imagePath, String title, int price, int userCount
+});
+
+
+
+
+}
+/// @nodoc
+class __$ListingItemCopyWithImpl<$Res>
+    implements _$ListingItemCopyWith<$Res> {
+  __$ListingItemCopyWithImpl(this._self, this._then);
+
+  final _ListingItem _self;
+  final $Res Function(_ListingItem) _then;
+
+/// Create a copy of ListingItem
+/// with the given fields replaced by the non-null parameter values.
+@override @pragma('vm:prefer-inline') $Res call({Object? imagePath = null,Object? title = null,Object? price = null,Object? userCount = null,}) {
+  return _then(_ListingItem(
+imagePath: null == imagePath ? _self.imagePath : imagePath // ignore: cast_nullable_to_non_nullable
+as String,title: null == title ? _self.title : title // ignore: cast_nullable_to_non_nullable
+as String,price: null == price ? _self.price : price // ignore: cast_nullable_to_non_nullable
+as int,userCount: null == userCount ? _self.userCount : userCount // ignore: cast_nullable_to_non_nullable
+as int,
+  ));
+}
+
+
+}
+
+// dart format on

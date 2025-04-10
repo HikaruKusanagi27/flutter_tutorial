@@ -6,9 +6,7 @@ class BuildingLayoutPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Flutter layout demo'),
-      ),
+      appBar: AppBar(title: const Text('Flutter layout demo')),
       body: ListView(
         children: [
           Image.asset('images/lake.jpg'),
@@ -38,16 +36,12 @@ class TitleSection extends StatelessWidget {
                   padding: const EdgeInsets.only(bottom: 8),
                   child: const Text(
                     'Oeschinen Lake Campground',
-                    style: TextStyle(
-                      fontWeight: FontWeight.bold,
-                    ),
+                    style: TextStyle(fontWeight: FontWeight.bold),
                   ),
                 ),
                 Text(
                   'Kandersteg, Switzerland',
-                  style: TextStyle(
-                    color: Colors.grey[500],
-                  ),
+                  style: TextStyle(color: Colors.grey[500]),
                 ),
               ],
             ),
@@ -138,8 +132,8 @@ class FavoriteWidget extends StatefulWidget {
 }
 
 class _FavoriteWidgetState extends State<FavoriteWidget> {
-  bool _isFavorited = true;
-  int _favoriteCount = 41;
+  var _isFavorited = true;
+  var _favoriteCount = 41;
 
   // お気に入り数とお気に入りチェック
   void _toggleFavorite() {
@@ -162,20 +156,13 @@ class _FavoriteWidgetState extends State<FavoriteWidget> {
         IconButton(
           padding: EdgeInsets.zero,
           alignment: Alignment.centerRight,
-          icon: (_isFavorited
-              ? Icon(
-                  Icons.star,
-                  color: Colors.red[500],
-                )
-              : const Icon(Icons.star_border)),
+          icon:
+              (_isFavorited
+                  ? Icon(Icons.star, color: Colors.red[500])
+                  : const Icon(Icons.star_border)),
           onPressed: _toggleFavorite,
         ),
-        SizedBox(
-          width: 18,
-          child: SizedBox(
-            child: Text('$_favoriteCount'),
-          ),
-        ),
+        SizedBox(width: 18, child: SizedBox(child: Text('$_favoriteCount'))),
       ],
     );
   }
