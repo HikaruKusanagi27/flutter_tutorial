@@ -3,6 +3,8 @@ import 'package:flutter_tutorial/callback/callback_page.dart';
 import 'package:flutter_tutorial/drift/pages/todo_list_page/todo_list_page.dart';
 import 'package:flutter_tutorial/qiita/view/qiita_page.dart';
 import 'package:flutter_tutorial/async/async_page.dart';
+import 'package:flutter_tutorial/riverpod_tutorial/riverpod_tutorial_page.dart'
+    show RiverpodTutorialPage;
 import 'package:flutter_tutorial/youtube/pages/youtube_page.dart';
 import 'package:flutter_tutorial/animation/animation_page.dart';
 import 'package:flutter_tutorial/building/building_layout_page.dart';
@@ -19,15 +21,22 @@ class IndexPage extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            PageButton(text: 'Tutorial1', widget: BuildingLayoutPage()),
-            PageButton(text: 'Tutorial1.1', widget: AnimationPage()),
-            PageButton(text: 'YouTubeボタン', widget: YoutubePage()),
-            PageButton(text: 'Tutorial2.2', widget: ResidencePage()),
-            PageButton(text: 'Tutorial2.3', widget: MercariPage()),
-            PageButton(text: 'Async', widget: AsyncPage()),
-            PageButton(text: 'Tutorial6', widget: QiitaPage()),
-            PageButton(text: 'Drift', widget: TodoListPage()),
-            PageButton(text: 'Callback', widget: CallbackScreen()),
+            PageButton(
+              text: 'BuildingLayoutPage',
+              widget: BuildingLayoutPage(),
+            ),
+            PageButton(text: 'AnimationPage', widget: AnimationPage()),
+            PageButton(text: 'YoutubePage', widget: YoutubePage()),
+            PageButton(text: 'ResidencePage', widget: ResidencePage()),
+            PageButton(text: 'MercariPage', widget: MercariPage()),
+            PageButton(text: 'AsyncPage', widget: AsyncPage()),
+            PageButton(text: 'QiitaPage', widget: QiitaPage()),
+            PageButton(text: 'TodoListPage', widget: TodoListPage()),
+            PageButton(text: 'CallbackScreen', widget: CallbackScreen()),
+            PageButton(
+              text: 'Riverpod Tutorial',
+              widget: RiverpodTutorialPage(),
+            ),
           ],
         ),
       ),
